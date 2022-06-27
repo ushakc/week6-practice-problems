@@ -28,11 +28,14 @@ print(x)
 
 #2.) How would you change the hero_name of the first hero from 'Batman' to "Dark Knight"?
 
-    
+heros[0]['hero_name'] = "Dark Knight"
+print(heros)
 
 #3.) For the franchise dictionary, how would you change 'Aquaman' to 'Daredevil'?
+franchise['dc'][1] = 'Daredevil'
+print(franchise)
 #4.) For z, how would you change the value 20 to 30?
-
+z[0]['y'] = 30
 #-----------------------------------------------------------------
 #Problem 2
 #Create a function that given a list of dictionaries, it loops through each dictionary in the list and prints each key and the associated value.  
@@ -52,6 +55,13 @@ superheros = [
 #real_name - Bruce Banner, hero_name - The Incredible Hulk 
 #real_name - Diana Prince, hero_name - Wonder Woman
 
+
+def iterateDictionary(superheros):
+    for hero in superheros:
+        for key,value in hero.items():
+            print(key+ '-' +value, end =', ')
+        print()
+
 #------------------------------------------------------------------
 #Problem 3
 #Create a function that given a list of dictionaries and a key name, 
@@ -63,6 +73,10 @@ superheros = [
 #Bruce Banner
 #Diana Prince
 
+def iterateDictionary2(str, superheros):
+    for hero in superheros:
+        print(hero[str])
+
 
 #-----------------------------------------------------------------
 #Problem 4
@@ -72,6 +86,14 @@ movie_collection = {
     'disney': ['Cinderella', 'Encanto', 'Little Mermaid', 'Tangled', 'Beauty & The Beast', 'Lion King', '101 Dalmations'],
     'pixar': ['Toy Story', 'Monsters, Inc.', 'Up', 'Finding Nemo', 'Coco', 'Wall-E', 'The Incredibles', 'Inside Out']
 }
+
+def count_list(movie_collection):
+    for movie, collection in movie_collection.items():
+        print(len(movie) +1, end= " ")
+        print( movie.upper())
+        for movie_name in collection:
+            print(movie_name)
+        print()
 
 #Expected Outpout
 #7 DISNEY
