@@ -18,6 +18,7 @@ franchise = {
     'marvel' : ['Hulk', 'Thor', 'Black Widow']
 }
 z = [ {'x': 10, 'y': 20} ]
+
 #1.) How would you change the value 10 in x to 15?  Once you're done x should then be [ [5,2,3], [15,8,9] ].  
 
 for i in range(len(x)):
@@ -36,7 +37,9 @@ franchise['dc'][1] = 'Daredevil'
 print(franchise)
 #4.) For z, how would you change the value 20 to 30?
 z[0]['y'] = 30
+print(z)
 #-----------------------------------------------------------------
+
 #Problem 2
 #Create a function that given a list of dictionaries, it loops through each dictionary in the list and prints each key and the associated value.  
 #For example, given the following list:
@@ -61,6 +64,7 @@ def iterateDictionary(superheros):
         for key,value in hero.items():
             print(key+ '-' +value, end =', ')
         print()
+iterateDictionary(superheros)
 
 #------------------------------------------------------------------
 #Problem 3
@@ -76,6 +80,7 @@ def iterateDictionary(superheros):
 def iterateDictionary2(str, superheros):
     for hero in superheros:
         print(hero[str])
+iterateDictionary2('real_name', superheros)
 
 
 #-----------------------------------------------------------------
@@ -94,6 +99,7 @@ def count_list(movie_collection):
         for movie_name in collection:
             print(movie_name)
         print()
+count_list(movie_collection)
 
 #Expected Outpout
 #7 DISNEY
