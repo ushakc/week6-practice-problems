@@ -63,8 +63,10 @@ def iterateDictionary(superheros):
     for hero in superheros:
         for key,value in hero.items():
             print(key+ '-' +value, end =', ')
-        print()
+            print()
 iterateDictionary(superheros)
+
+
 
 #------------------------------------------------------------------
 #Problem 3
